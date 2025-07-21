@@ -85,6 +85,7 @@ class Activity(BaseModel):
     branch: Optional[BranchType] = None
     organ: Optional[OrganType] = None
     lieu: Optional[str] = None
+    image: Optional[str] = None  # Base64 encoded image
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
 class ActivityCreate(BaseModel):
@@ -94,6 +95,7 @@ class ActivityCreate(BaseModel):
     branch: Optional[BranchType] = None
     organ: Optional[OrganType] = None
     lieu: Optional[str] = None
+    image: Optional[str] = None  # Base64 encoded image
 
 class PedagogicalProject(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
